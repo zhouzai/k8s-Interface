@@ -1,0 +1,1276 @@
+{
+	"info": {
+		"_postman_id": "2e5da5d2-fbae-4675-a00a-5aa30da1472a",
+		"name": "K8S接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "k8s",
+			"item": [
+				{
+					"name": "pod",
+					"item": [
+						{
+							"name": "get读取指定 Pod 的日志",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/api/v1/namespaces/yzfar/pods/mysql1-86f8499847-pvxcr/log",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"api",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"pods",
+										"mysql1-86f8499847-pvxcr",
+										"log"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的 Pod",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/api/v1/namespaces/yzfar/pods/mysql1-86f8499847-pvxcr/",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"api",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"pods",
+										"mysql1-86f8499847-pvxcr",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定 Pod 的状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/api/v1/namespaces/yzfar/pods/mysql1-86f8499847-pvxcr/status",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"api",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"pods",
+										"mysql1-86f8499847-pvxcr",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察 Pod 种类的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/api/v1/namespaces/yzfar/pods/",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"api",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"pods",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察的所有 Pod 种类的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/api/v1/pods/",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"api",
+										"v1",
+										"pods",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察所有的 ReplicaSet 类型的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/replicasets",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"replicasets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的ReplicaSet",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/yzfar/replicasets/mysql1-86f8499847",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"replicasets",
+										"mysql1-86f8499847"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定ReplicaSet的状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/yzfar/replicasets/mysql1-86f8499847/status",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"replicasets",
+										"mysql1-86f8499847",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察单个 ReplicaSet 类型的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/yzfar/replicasets",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"replicasets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察所有类部署对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/deployments",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"deployments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察单个空间类部署对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/yzfar/deployments",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"deployments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的Deployment",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/yzfar/deployments/tomcat1",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"deployments",
+										"tomcat1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的Deployment状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/yzfar/deployments/tomcat1/status",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"yzfar",
+										"deployments",
+										"tomcat1",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察所有StatefulSet 类型的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/statefulsets",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"statefulsets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察单个StatefulSet 类型的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/kube-system/statefulsets",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"kube-system",
+										"statefulsets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定 StatefulSet 的状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/kube-system/statefulsets/snapshot-controller/status",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"kube-system",
+										"statefulsets",
+										"snapshot-controller",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或监视种类所有ontrollerRevision 的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/controllerrevisions",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"controllerrevisions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或监视种类单个ControllerRevision 的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/kube-system/controllerrevisions",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"kube-system",
+										"controllerrevisions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的ControllerRevision",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/kube-system/controllerrevisions/calico-node-746c5c75c6",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"kube-system",
+										"controllerrevisions",
+										"calico-node-746c5c75c6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或监视 所有DaemonSet 类型的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/daemonsets",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"daemonsets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或监视单个DaemonSet 类型的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/kube-system/daemonsets",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"kube-system",
+										"daemonsets"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的 DaemonSet",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/kube-system/daemonsets/calico-node",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"kube-system",
+										"daemonsets",
+										"calico-node"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的 DaemonSet状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/apps/v1/namespaces/kube-system/daemonsets/calico-node/status",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"apps",
+										"v1",
+										"namespaces",
+										"kube-system",
+										"daemonsets",
+										"calico-node",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观看所有 Job 的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/batch/v1/jobs",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"batch",
+										"v1",
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观看单个 Job 的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/batch/v1/namespaces/kubesphere-system/jobs",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"batch",
+										"v1",
+										"namespaces",
+										"kubesphere-system",
+										"jobs"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的 Job",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/batch/v1/namespaces/kubesphere-system/jobs/openpitrix-import-job",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"batch",
+										"v1",
+										"namespaces",
+										"kubesphere-system",
+										"jobs",
+										"openpitrix-import-job"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定作业的状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/batch/v1/namespaces/kubesphere-system/jobs/openpitrix-import-job/status",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"batch",
+										"v1",
+										"namespaces",
+										"kubesphere-system",
+										"jobs",
+										"openpitrix-import-job",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get读取指定的 PriorityClass",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/scheduling.k8s.io/v1/priorityclasses/system-node-critical",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"scheduling.k8s.io",
+										"v1",
+										"priorityclasses",
+										"system-node-critical"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "list列出或观察类 PriorityClass 的对象",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/scheduling.k8s.io/v1/priorityclasses",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"scheduling.k8s.io",
+										"v1",
+										"priorityclasses"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "监控信息",
+					"item": [
+						{
+							"name": "获取所有Node资源状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/metrics.k8s.io/v1beta1/nodes",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"metrics.k8s.io",
+										"v1beta1",
+										"nodes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取所有pods资源状态",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/metrics.k8s.io/v1beta1/namespaces/yzfar/pods",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"metrics.k8s.io",
+										"v1beta1",
+										"namespaces",
+										"yzfar",
+										"pods"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取某个Node节点资源",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/metrics.k8s.io/v1beta1/nodes/node1",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"metrics.k8s.io",
+										"v1beta1",
+										"nodes",
+										"node1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取某个Pod资源",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/apis/metrics.k8s.io/v1beta1/namespaces/yzfar/pods/mysql1-86f8499847-pvxcr",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"apis",
+										"metrics.k8s.io",
+										"v1beta1",
+										"namespaces",
+										"yzfar",
+										"pods",
+										"mysql1-86f8499847-pvxcr"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "获取k8s的所有名称空间",
+							"protocolProfileBehavior": {
+								"disableUrlEncoding": false
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://192.168.0.75:6443/api/v1/namespaces",
+									"protocol": "https",
+									"host": [
+										"192",
+										"168",
+										"0",
+										"75"
+									],
+									"port": "6443",
+									"path": [
+										"api",
+										"v1",
+										"namespaces"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "k8s 认证",
+					"protocolProfileBehavior": {
+						"disableUrlEncoding": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjRZYnJtckRSbmhSNWRqNGN4YmhRUjMyeHU0aHdkQV83V2Q0UUtpRWlTc0EifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6Inl6ZmFyYXBpLXRva2VuLWc2Njh4Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6Inl6ZmFyYXBpIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQudWlkIjoiNTFjZmY4MTItZmI1YS00ODAwLWE2M2ItY2I4MGI2MDYwY2JkIiwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6eXpmYXJhcGkifQ.iIAXmf8whJQmF4Wz6Ot5tLU7w-4k1JDQy3AaFMCR14VkT5SAwyAWI3No-TjlZoITa4vIfGUfO04Dv94kkNoZh1XkvFAFxuoN9J6KaI9gCCp0INzk_cauNmWClaF5rUtd-rztTEXuCvRUCBBqd2HpliefZuuHMpwBxp0p3R-Dw4RQaE0XImISmQjRZZShaGdcwBzIh5nGCN0U3K8gaeDzLroVR72mmV_-Mgnbs1n8JUY38DDTtiu_XPzPyAXIM9i2meA1ByX3lYi9AMNT1hASh3u_HVnr5ErASUMU30Cmg8giW30OFhUE7aucoIeXePOhwB7PHRD0-HPGEmSg8YDWbw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://192.168.0.75:6443/api/v1",
+							"protocol": "https",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"75"
+							],
+							"port": "6443",
+							"path": [
+								"api",
+								"v1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
