@@ -1,1 +1,3 @@
 # k8s-Interface
+主要是通过调用k8s的接口进行资源监控
+使用python进行监控并且写入mysql数据库中
