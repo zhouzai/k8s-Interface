@@ -1,0 +1,18 @@
+使用serviceaccount来访问
+
+创建serviceaccount并绑定集群角色cluster-admin
+kubectl create serviceaccount  yzfar 
+kubectl create clusterrolebinding   yzfar-cluster-admin --clusterrole='cluster-admin' --serviceaccount=default:yzfar
+
+获取serviceaccount sa-panmeng 的secret token
+TOKEN=$(kubectl get secrets -o jsonpath="{.items[?(@.metadata.annotations['kubernetes\.io/service-account\.name']=='sa-panmeng')].data.token}"|base64 -d)
+
+使用token访问api
+curl --header "Authorization: Bearer $TOKEN" --insecure  -X GET https://ip:6443/api/v1/namespaces/test/pods?limit=1
+
+
+
+
+
+
+https://github.com/kubernetes-client/java
